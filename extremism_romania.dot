@@ -1,0 +1,89 @@
+digraph extremism_romania {
+  extremism [label="Extremism în \nRomânia", shape=doublecircle];
+
+  trecut_comunist [label="Trecut \ncomunist", style=filled, fillcolor="lightgray"];
+  razboi_ucraina [label="Războiul din \nUcraina", style=filled, fillcolor="lightgray"];  
+  coruptie [label="Corupție", style=filled, fillcolor="lightcoral"];
+  saracie [label="Sărăcie/\nDisperare economică", style=filled, fillcolor="lightcoral"];
+  educatie_precara [label="Educație \nPrecară"];
+  social_media [label="Rețele \nSociale", style=filled, fillcolor="lightyellow"];
+  autoritarism [label="Autoritarism \nîn creștere", style=filled, fillcolor="lightyellow"];
+  propaganda [label="Propagandă și \nDezinformare"];
+  manipulare [label="Manipulare și \nVulnerabilitate"];
+  anti_sistem [label="Anti-sistem", style=filled, fillcolor="lightblue"];
+  polarizare [label="Polarizare"];
+  homofobie [label="Homofobie", style=filled, fillcolor="lightblue"]; 
+  nationalism [label="Naționalism"];
+
+  trecut_comunist -> coruptie [label="Guvernare \nineficientă"];
+  trecut_comunist -> educatie_precara [label="Control \nideologic"];
+  trecut_comunist -> saracie [label="Crearea rapidă \na inegalității"];
+  trecut_comunist -> autoritarism [label="Nostalgie pentru \nautoritarism"];  
+  trecut_comunist -> autoritarism [label="Sprijin pentru \nregimuri puternice"];
+
+  coruptie -> saracie [label="Instabilitate \neconomică"];
+  coruptie -> educatie_precara [label="Subfinanțare"];
+  coruptie -> social_media [label="Exploatarea neîncrederii/\npropagarea dezinformării"];
+  coruptie -> polarizare [label="Favorizarea \nclivajului social"];
+  coruptie -> anti_sistem [label="Nemulțumire față de \ncorupție"];
+
+  saracie -> extremism [label="Disperare, \nvulnerabilitate"];
+  saracie -> educatie_precara [label="Acces \nlimitat"];
+  saracie -> social_media [label="Căutarea evadării/comunității"];
+  saracie -> polarizare [label="Adâncirea \ndiviziunilor sociale"];
+  saracie -> anti_sistem [label="Nemulțumire față de \ninegalitățile economice"];
+  saracie -> educatie_precara [label="Acces \nlimitativ la educație"];
+
+  educatie_precara -> manipulare [label="Crește manipularea"];
+  educatie_precara -> autoritarism [label="Nevoia de \nordine"];
+  educatie_precara -> saracie [label="Reducerea \nopțiunilor economice"];
+
+  social_media -> propaganda [label="Dezinformare \ncoordonată"];
+  social_media -> polarizare [label="Crearea de \ngrupuri izolate"];
+  social_media -> homofobie [label="Propagarea \nura anti-LGBTQ+"];
+  
+  propaganda -> extremism [label="Radicalizare \nideologică"];
+
+  razboi_ucraina -> social_media [label="Amplificarea \nnarativelor/propagandei \nde război"];
+  razboi_ucraina -> nationalism [label="Naționalism \nexacerbat"];
+  razboi_ucraina -> polarizare [label="Intensificarea \ndiviziunilor"];
+  razboi_ucraina -> autoritarism [label="Narrative \nanti-occidentale"];
+
+  polarizare -> anti_sistem [label="Divizare socială"];
+  polarizare -> homofobie [label="Stigmatizarea \ngrupurilor"];
+  
+  nationalism -> anti_sistem [label="Respingerea \nregimului existent"];
+  nationalism -> autoritarism [label="Tendințe \nautoritare"];
+  nationalism -> homofobie [label="Respingerea \nminoritatilor"];
+  
+  autoritarism -> extremism [label="Consolidarea \npoporului"];
+  
+  homofobie -> extremism [label="Excluderea și \nradicalizarea socială"];
+  
+  anti_sistem -> extremism [label="Saturatie"]
+
+  manipulare -> social_media [label="Amplifică vulnerabilitatea \nla manipulare online"];
+  manipulare -> propaganda [label="Crește susceptibilitatea \nla dezinformare"];
+  manipulare -> extremism [label="Căutarea răspunsurilor \nradicale"];
+  manipulare -> autoritarism [label="Sprijin pentru \nregimuri autoritare"];
+
+  subgraph cluster_legenda {
+    label = "Legendă";
+    
+    node [shape=plaintext];
+    cheie [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+           <TR>
+             <TD BGCOLOR="lightgray">Gri</TD><TD>Factor nemodificabil</TD> 
+           </TR>
+           <TR>
+             <TD BGCOLOR="lightcoral">Rosu</TD><TD>Influență mare asupra contextului</TD> 
+           </TR>
+            <TR>
+             <TD BGCOLOR="lightyellow">Galben</TD><TD>Factorii cei mai influentabili</TD> 
+           </TR>
+           <TR>
+            <TD BGCOLOR="lightblue">Albastru</TD><TD>Cele mai influente cauze, anecdotic</TD>
+           </TR>
+         </TABLE>>];
+  }
+}
