@@ -32,11 +32,12 @@ digraph extremism_romania {
   saracie -> social_media [label="Căutarea evadării/comunității"];
   saracie -> polarizare [label="Adâncirea \ndiviziunilor sociale"];
   saracie -> anti_sistem [label="Nemulțumire față de \ninegalitățile economice"];
+  
+  educatie_precara -> saracie [label="Reducerea \nopțiunilor economice"];
   saracie -> educatie_precara [label="Acces \nlimitativ la educație"];
 
   educatie_precara -> manipulare [label="Crește manipularea"];
   educatie_precara -> autoritarism [label="Nevoia de \nordine"];
-  educatie_precara -> saracie [label="Reducerea \nopțiunilor economice"];
 
   social_media -> propaganda [label="Dezinformare \ncoordonată"];
   social_media -> polarizare [label="Crearea de \ngrupuri izolate"];
